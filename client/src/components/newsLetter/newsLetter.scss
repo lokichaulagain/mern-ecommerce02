@@ -1,0 +1,42 @@
+.newsLetterCon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .newsLetterTitle {
+        font-size: 80px;
+    }
+    .newsLetterSubTitle {
+        font-size: 20px;
+        font-weight: 500;
+        margin-top: 16px;
+    }
+    .newsLetterInputConWrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .newsLetterInputCon {
+            margin-top: 22px;
+            width: 610px;
+            height: 38px;
+            margin-right: 15px;
+            .newsLetterInput {
+                padding-left: 10px;
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .sendButCon {
+            margin-top: 26px;
+            width: 70px;
+            height: 41px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: green;
+            // margin-left: 4.425px;
+            color: white;
+            cursor: pointer;
+        }
+    }
+}
