@@ -1,7 +1,7 @@
 .navBar {
     height: 60px;
     background-color: aquamarine;
-
+    z-index: 999;
     .navWrapper {
         padding: 10px 30px;
         display: flex;

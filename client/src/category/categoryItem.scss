@@ -1,0 +1,40 @@
+.categoryItemCon {
+    flex: 1;
+    margin: 3px;
+    
+    
+
+    .itemImgCon {
+        height: 70vh;
+        position: relative;
+        
+        
+        .itemIng {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            
+        }
+    }
+    .info {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 150vh;
+        display: flex;
+        flex-direction: column;
+        margin-left: 70px;
+       
+        
+
+        .itemTitle {
+            font-size: 30px;
+            font-weight: 600;
+        }
+        .itemButton{
+            width: 100px;
+            height: 45px;
+        }
+    }
+}
