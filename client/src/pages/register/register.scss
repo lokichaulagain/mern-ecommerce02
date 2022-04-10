@@ -1,0 +1,70 @@
+.registerCon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    .registerWrapper{
+        padding: 50px;
+        margin-top: 80px;
+        width: 50vw;
+        height:70vh;
+        background-color: pink;
+        display: flex;
+        flex-direction: column;
+
+        .registerTitle{
+            font-size: 30px;
+            font-weight: 600;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 50px;
+        }
+
+        .regUsernameInput{
+            height: 38px;
+            width: 100%;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            background-color: rgb(243, 240, 240);
+            border: none;
+            outline: none;
+            border:2px solid teal;
+            padding-left: 6px;
+            
+
+        }
+        .registerBut{
+            height: 38px;
+            width: 100%;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            background-color: teal;
+            border: none;
+            color: white;
+
+        }
+        
+        // .createAccAndForgotRow{
+        //     display: flex;
+        //     justify-content: space-between;
+        //     margin-bottom: 20px;
+            .dontHaveAcc{
+                font-size: 20px;
+                font-weight: 500;
+    
+            }
+            .alreadyHaveAcc{
+                font-size: 20px;
+                font-weight: 600;
+                margin-bottom: 20px;
+                display: flex;
+                justify-content: center;
+                
+            }
+
+        }
+        
+        
+
+    }
+
