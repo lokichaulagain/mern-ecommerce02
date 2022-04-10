@@ -1,0 +1,44 @@
+.navBar {
+    height: 60px;
+    background-color: aquamarine;
+
+    .navWrapper {
+        padding: 10px 30px;
+        display: flex;
+
+        .navLeft {
+            flex: 1;
+            display: flex;
+            align-items: center;
+
+            .navSearchCon {
+                display: flex;
+                align-items: center;
+                background-color: antiquewhite;
+
+                .navSearch {
+                    border: none;
+                }
+            }
+        }
+        .navCenter {
+            flex: 1;
+            text-align: center;
+            .logo {
+                font-weight: 700;
+                font-size: 24px;
+            }
+        }
+        .navRight {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+
+            .navRightItem {
+                margin-left: 20px;
+                font-weight: 600;
+                font-size: 16px;
+            }
+        }
+    }
+}
