@@ -67,19 +67,6 @@ function Footer() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
                 <div className="footerRightCon">
                     <span className="footerRightConTitle">Our Contact</span>
                     <div className="addressRow">

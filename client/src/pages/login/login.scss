@@ -1,0 +1,58 @@
+.loginCon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    .loginWrapper{
+        padding: 50px;
+        margin-top: 80px;
+        width: 50vw;
+        height:40vh;
+        background-color: pink;
+        display: flex;
+        flex-direction: column;
+
+        .usernameInput{
+            height: 38px;
+            width: 100%;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            background-color: rgb(243, 240, 240);
+            border: none;
+            outline: none;
+            border:2px solid teal
+
+        }
+        .loginBut{
+            height: 38px;
+            width: 100%;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            background-color: teal;
+            border: none;
+            color: white;
+
+        }
+        
+        .createAccAndForgotRow{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            .dontHaveAcc{
+                font-size: 20px;
+                font-weight: 500;
+    
+            }
+            .forgotPassword{
+                font-size: 20px;
+                font-weight: 600;
+                color: teal;
+            }
+
+        }
+        
+        
+
+    }
+
+}

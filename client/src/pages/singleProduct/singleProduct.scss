@@ -1,0 +1,53 @@
+.singleProductCon {
+    .singleProductConWrapper {
+        display: flex;
+        // flex-direction: column;
+        justify-content: space-between;
+
+        .singleProductImgCon {
+            flex: 1;
+        }
+        .singleProductInfoCon {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+
+            .colorAndSizeRow {
+                display: flex;
+                align-items: center;
+                .circularColorChooseDisk {
+                    height: 20px;
+                    width: 20px;
+                    border-radius: 50%;
+                    margin-right: 10px;
+                }
+                .red {
+                    background-color: red;
+                }
+                .blue {
+                    background-color: blue;
+                }
+                .black {
+                    background-color: black;
+                }
+                .grey {
+                    background-color: grey;
+                }
+                .green {
+                    background-color: green;
+                }
+                .orange {
+                    background-color: orange;
+                }
+            }
+
+            .sizeChooseRow{
+                .selectSize{
+                    height: 25px;
+                    width: 80px;
+
+                }
+            }
+        }
+    }
+}
