@@ -1,0 +1,87 @@
+.footerCon {
+    height: 40vh;
+    background-color: rgb(234, 231, 231);
+    .footerWrapper {
+        padding: 30px 20px;
+        display: flex;
+        .footerLeftCon {
+            flex: 1;
+            padding-right: 200px;
+
+            .footerLeftConTitle {
+                font-size: 24px;
+                font-weight: 600;
+                margin-bottom: 10px;
+            }
+            .footerLeftConSubTitle {
+                font-size: 16px;
+                margin-bottom: 12px;
+            }
+
+            .socialMediaIconCon {
+                display: flex;
+
+                .socialMediaIcon {
+                    width: 34px;
+                    height: 34px;
+                    background-color: pink;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-right: 12px;
+                }
+            }
+        }
+
+        //center
+        .footerCenterCon {
+            flex: 1;
+
+            .footerCenterConTitle {
+                font-size: 24px;
+                font-weight: 600;
+                margin-bottom: 10px;
+            }
+
+            .quickLinkCon {
+                .quickLinkLists {
+                    display: flex;
+                    flex-wrap: wrap;
+
+                    .quickLinkListsItem {
+                        font-size: 16px;
+                        font-weight: 600;
+                        margin-top: 10px;
+                        display: flex;
+                        align-items: center;
+                        width: 50%;
+                    }
+                }
+            }
+        }
+
+        //Right
+        .footerRightCon {
+            flex: 1;
+
+            .footerRightConTitle{
+
+                font-size: 24px;
+                font-weight: 600;
+                margin-bottom: 10px;
+            }
+            .addressRow{
+                display: flex;
+                align-items: center;
+                margin-top: 12px;
+
+                .contactSpan{
+                    margin-left: 14px;
+                }
+            }
+
+            
+    }
+}
+}

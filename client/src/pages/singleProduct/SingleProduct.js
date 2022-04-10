@@ -3,6 +3,7 @@ import "./singleProduct.scss"
 import Announcement from "../../components/announcement/Announcement"
 import Navbar from "../../components/navbar/Navbar"
 import Newsletter from "../../components/newsLetter/NewsLetter"
+import Footer from '../../components/footer/Footer'
 
 function SingleProduct() {
     return (
@@ -10,6 +11,7 @@ function SingleProduct() {
             <Announcement />
             <Navbar />
             <Newsletter />
+            <Footer/>
 
         </div>
     )
