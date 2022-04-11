@@ -1,7 +1,8 @@
 // import Home from "./pages/home/Home";
 // import SingleProduct from "./pages/singleProduct/SingleProduct";
 // import Login from "./pages/login/Login";
-import Register from "./pages/register/Register";
+import Cart from "./pages/cart/Cart";
+// import Register from "./pages/register/Register";
 
 function App() {
   return (
@@ -9,7 +10,8 @@ function App() {
       {/* <Home /> */}
       {/* <SingleProduct /> */}
       {/* <Login/> */}
-      <Register />
+      {/* <Register /> */}
+      <Cart/>
     </div>
   );
 }

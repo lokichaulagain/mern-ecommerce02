@@ -1,0 +1,152 @@
+.cartCon {
+    .cartWrapper {
+        display: flex;
+        flex-direction: column;
+        padding: 30px;
+        // align-items: center;
+
+        .cartTitle {
+            text-align: center;
+            font-size: 40px;
+            font-weight: 600;
+        }
+        .cartTopRow {
+            display: flex;
+            justify-content: space-between;
+
+            .continueShoppingBut {
+                width: 150px;
+                height: 40px;
+                color: black;
+                font-size: 14px;
+                padding: 2px;
+                font-weight: 600;
+                cursor: pointer;
+            }
+
+            .middleTextCon {
+                display: flex;
+                align-items: center;
+                font-size: 16px;
+                font-weight: 500;
+                text-decoration: underline;
+
+                .middleTxtFirst {
+                    margin-right: 20px;
+                    cursor: pointer;
+                }
+
+                .middleTxtSecond {
+                    cursor: pointer;
+                }
+            }
+
+            .checkOutBut {
+                width: 150px;
+                height: 40px;
+                background-color: black;
+                color: white;
+                font-size: 14px;
+                padding: 2px;
+                font-weight: 600;
+                cursor: pointer;
+            }
+        }
+
+        .cartInfoRow {
+            margin-top: 50px;
+            display: flex;
+            justify-content: space-between;
+
+            .cartProductDetail{
+                display: flex;
+                .cartProductImgCon{
+                    width: 134px;
+                    height: 140px;
+                    background-color: pink;
+
+                   .cartImg{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                   }
+                }
+                .cartProductDetailInfo{
+                    .cartProductDetailInfoColumn1{
+                        display: flex;
+                        flex-direction: column;
+                        .cartProductNameCon{
+                           margin-bottom: 20px;
+                            .cartProductNameTitle{
+                                font-size: 16px;
+                                font-weight: 700;
+                            }
+                            
+
+                        }
+                        .cartProductColorCon{
+                            width: 18px;
+                            height: 18px;
+                            border-radius: 50%;
+                            background-color: black;
+                            margin-bottom: 20px;
+                        }
+                    }
+
+                }
+            }
+
+
+
+
+            .cartProductDetail {
+                flex: 3;
+            }
+            .cartOrderSummary {
+                flex: 1;
+
+                .orderSummaryCardBox {
+                    width: 340px;
+                    height: 320px;
+                    background-color: pink;
+                    padding: 20px;
+                    border-radius: 5px;
+                    .orderSummaryTitle {
+                        font-size: 30px;
+                        font-weight: 500;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                    .orderSummaryList {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        font-size: 16px;
+                        margin-top: 20px;
+                    }
+                    .orderSummaryTotal {
+                        font-size: 30px;
+                        font-weight: 600;
+                        margin-top: 30px;
+                        display: flex;
+                        justify-content: space-between;
+                    }
+
+                    .orderSummaryCheckOutButton {
+                        width: 340px;
+                        height: 42px;
+                        background-color: black;
+                        color: white;
+                        font-size: 14px;
+                        padding: 2px;
+                        font-weight: 600;
+                        cursor: pointer;
+                        margin-top: 20px;
+                    }
+                }
+            }
+        }
+        
+    }
+}
