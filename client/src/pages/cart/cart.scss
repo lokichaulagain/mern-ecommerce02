@@ -1,9 +1,9 @@
 .cartCon {
+   
     .cartWrapper {
         display: flex;
         flex-direction: column;
         padding: 30px;
-        // align-items: center;
 
         .cartTitle {
             text-align: center;
@@ -12,6 +12,7 @@
         }
         .cartTopRow {
             display: flex;
+
             justify-content: space-between;
 
             .continueShoppingBut {
@@ -19,7 +20,6 @@
                 height: 40px;
                 color: black;
                 font-size: 14px;
-                padding: 2px;
                 font-weight: 600;
                 cursor: pointer;
             }
@@ -56,118 +56,12 @@
         .cartInfoRow {
             margin-top: 50px;
             display: flex;
-            justify-content: space-between;
 
-            .cartProductDetail {
-                display: flex;
-                height: 140px;
-                .cartProductImgCon {
-                    width: 134px;
-                    height: 140px;
-                    background-color: pink;
-
-                    .cartImg {
-                        width: 100%;
-                        height: 100%;
-                        object-fit: cover;
-                    }
-                }
-                .cartProductDetailInfo {
-                    width: calc(100% - 134px);
-                    height: 100%;
-                    display: flex;
-                    justify-content: space-between;
-                    padding: 0px 20px;
-                    .cartProductDetailInfoColumn1 {
-                        display: flex;
-                        flex-direction: column;
-                        .cartProductNameCon {
-                            margin-bottom: 20px;
-                            .cartProductNameTitle {
-                                font-size: 16px;
-                                font-weight: 700;
-                            }
-                        }
-                        .cartProductColorCon {
-                            width: 18px;
-                            height: 18px;
-                            border-radius: 50%;
-                            background-color: black;
-                            margin-bottom: 20px;
-                        }
-                    }
-
-                    .cartProductDetailInfoColumn2 {
-                         padding-right: 400px;
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-
-                        .cartAddRemoveCon {
-                            display: flex;
-                            align-items: center;
-                            margin-bottom: 50px;
-
-                            .cartSelectedProductNum{
-                               font-size: 22px;
-                               font-weight: 500;
-                               margin: 0px 5px;
-                            }
-                            
-                        }
-                        .cartProductPrice{
-                            font-size: 32px;
-                        }
-                    }
-                }
+            .cartLeftSide {
+                flex: 5;
             }
-
-            .cartProductDetail {
-                flex: 3;
-            }
-            .cartOrderSummary {
-                flex: 1;
-
-                .orderSummaryCardBox {
-                    width: 340px;
-                    height: 320px;
-                    background-color: pink;
-                    padding: 20px;
-                    border-radius: 5px;
-                    .orderSummaryTitle {
-                        font-size: 30px;
-                        font-weight: 500;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                    }
-                    .orderSummaryList {
-                        display: flex;
-                        justify-content: space-between;
-                        align-items: center;
-                        font-size: 16px;
-                        margin-top: 20px;
-                    }
-                    .orderSummaryTotal {
-                        font-size: 30px;
-                        font-weight: 600;
-                        margin-top: 30px;
-                        display: flex;
-                        justify-content: space-between;
-                    }
-
-                    .orderSummaryCheckOutButton {
-                        width: 340px;
-                        height: 42px;
-                        background-color: black;
-                        color: white;
-                        font-size: 14px;
-                        padding: 2px;
-                        font-weight: 600;
-                        cursor: pointer;
-                        margin-top: 20px;
-                    }
-                }
+            .cartRightSide {
+                flex: 1.7;
             }
         }
     }

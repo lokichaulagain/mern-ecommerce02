@@ -1,0 +1,42 @@
+.cartOrderSummary {
+    .orderSummaryCardBox {
+        width: 340px;
+        height: 320px;
+        background-color: pink;
+        padding: 20px;
+        border-radius: 5px;
+        .orderSummaryTitle {
+            font-size: 30px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .orderSummaryList {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+        .orderSummaryTotal {
+            font-size: 30px;
+            font-weight: 600;
+            margin-top: 30px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .orderSummaryCheckOutButton {
+            width: 340px;
+            height: 42px;
+            background-color: black;
+            color: white;
+            font-size: 14px;
+            padding: 2px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+    }
+}
