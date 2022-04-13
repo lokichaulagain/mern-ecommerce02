@@ -1,0 +1,39 @@
+.categoryProductListPageCon {
+    .categoryProductListPageConWrapper {
+        .dresses{
+            font-size: 32px;
+            font-weight: 600;
+            color: rgb(67, 66, 66);
+            margin-left: 30px;
+        }
+        .categoryProductListPageFilterCon {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .filter1,
+            .filter2 {
+                .filterTxt {
+                    font-size: 22px;
+                    font-weight: 600;
+                    margin-right: 10px;
+                    margin: 0px 30px;
+                }
+
+                .colorsFilter,.sizeFilter {
+                    width: 100px;
+                    height: 34px;
+                    border: none;
+                    outline: none;
+                    border: 2px solid teal;
+                    margin-left: 5px;
+                    cursor: pointer;
+                    font-size: 16px;
+                    padding-left: 8px;
+                    font-weight: 600;
+                    margin-right: 20px;
+                }
+            }
+        }
+    }
+}
