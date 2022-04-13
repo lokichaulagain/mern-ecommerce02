@@ -6,48 +6,35 @@ import Badge from '@mui/material/Badge';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 
 
-
 function Navbar() {
     return (
         <div className="navBar">
             <div className="navWrapper">
 
                 <div className="navLeft">
-                    <span className="EN">EN</span>
-                    <ArrowDropDownIcon />
+                    <span className="eN">EN</span>
+                    <ArrowDropDownIcon className='navTopLeftDropdownIcon' />
                     <div className="navSearchCon">
                         <input type="text" placeholder="Search" className="navSearch" />
-                        <SearchIcon />
+                        <SearchIcon className='navSearchIcon' />
                     </div>
-
-
                 </div>
 
                 <div className="navCenter">
-                    <span className="logo">LOKI</span>
-
+                    <span className="logo">RoseCloset</span>
                 </div>
 
                 <div className="navRight">
                     <div className="navRightItem">
-                        <span>REGISTER</span>
-
-
-
+                        <span className='navRightTxt'>REGISTER</span>
                     </div>
-
-
                     <div className="navRightItem">
-                        <span>LOGIN</span>
-
+                        <span className='navRightTxt'>LOGIN</span>
                     </div>
-
-
                     <div className="navRightItem">
-                        <Badge badgeContent={4} color="primary">
-                            <ShoppingCartOutlinedIcon color="action" />
+                        <Badge className='navRightCartIconBadge' badgeContent={4} color="primary">
+                            <ShoppingCartOutlinedIcon className='navRightCartIcon' />
                         </Badge>
-
                     </div>
                 </div>
 
