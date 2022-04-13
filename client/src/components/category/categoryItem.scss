@@ -1,40 +1,45 @@
 .categoryItemCon {
     flex: 1;
-    margin: 3px;
-    
-    
+    margin: 10px;
 
     .itemImgCon {
         height: 70vh;
         position: relative;
-        
-        
-        .itemIng {
+
+        .itemImg {
             width: 100%;
             height: 100%;
             object-fit: cover;
             position: absolute;
-            
         }
     }
     .info {
         position: absolute;
         width: 100%;
         height: 100%;
-        top: 150vh;
+        top: 174vh;
         display: flex;
         flex-direction: column;
         margin-left: 70px;
-       
-        
 
         .itemTitle {
             font-size: 30px;
-            font-weight: 600;
+            font-weight: 700;
+            color: white;
         }
-        .itemButton{
+        
+        .itemButton {
             width: 100px;
-            height: 45px;
+            height: 38px;
+            border: none;
+            outline: none;
+            background-color: teal;
+            border: 1px solid grey;
+            border-radius: 6px;
+            color: white;
+            font-size: 14px;
+            font-weight: 600;
+            margin-top: 10px;
         }
     }
 }
