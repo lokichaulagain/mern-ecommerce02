@@ -1,25 +1,60 @@
 .singleProductCon {
     .singleProductConWrapper {
         display: flex;
-        // flex-direction: column;
         justify-content: space-between;
+        padding-left: 30px;
+        margin-top: 20px;
 
         .singleProductImgCon {
             flex: 1;
+
+            .singleProductImg {
+                width: 480px;
+                height: 500px;
+                background-color: rgb(230, 251, 251);
+            }
         }
         .singleProductInfoCon {
             flex: 1;
             display: flex;
             flex-direction: column;
+            margin-left: -400px;
+
+            .singleProductInfoName {
+                color: rgb(101, 101, 101);
+                font-size: 24px;
+                font-weight: 700;
+                margin-bottom: 14px;
+            }
+            .singleProductInfoSubTitle {
+                font-size: 16px;
+                font-weight: 500;
+                color: rgb(29, 27, 27);
+                margin-bottom: 14px;
+            }
+            .singleProductPrice {
+                font-size: 30px;
+                margin-bottom: 14px;
+                color: rgb(36, 35, 35);
+            }
 
             .colorAndSizeRow {
                 display: flex;
                 align-items: center;
+                margin-bottom: 14px;
+
+                .chooseColor {
+                    font-size: 20px;
+                    font-weight: 600;
+                    color: rgb(47, 41, 41);
+                    margin-right: 10px;
+                }
                 .circularColorChooseDisk {
                     height: 20px;
                     width: 20px;
                     border-radius: 50%;
-                    margin-right: 10px;
+                    margin-right: 16px;
+                    cursor: pointer;
                 }
                 .red {
                     background-color: red;
@@ -41,11 +76,64 @@
                 }
             }
 
-            .sizeChooseRow{
-                .selectSize{
-                    height: 25px;
-                    width: 80px;
+            .sizeChooseRow {
+                margin-bottom: 14px;
+                .singleProductPageSelectSizeTxt {
+                    font-size: 20px;
+                    font-weight: 600;
+                    color: rgb(47, 41, 41);
+                    margin-right: 10px;
+                }
 
+                .SingleProductPagesizeFilter {
+                    width: 100px;
+                    height: 34px;
+                    border: none;
+                    outline: none;
+                    border: 2px solid teal;
+                    margin-left: 5px;
+                    cursor: pointer;
+                    font-size: 16px;
+                    padding-left: 8px;
+                    font-weight: 600;
+                    margin-right: 20px;
+                }
+            }
+
+            .quantityIncDecAndCartRow {
+                margin-top: 20px;
+                display: flex;
+                align-items: center;
+                .quantityIncDec {
+                    display: flex;
+                    align-items: center;
+                    margin-right: 50px;
+                    cursor: pointer;
+
+                    .containerBetwnAddRemove {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 28px;
+                        height: 28px;
+                        border: 1.8px solid teal;
+                        border-radius: 8px;
+                        margin-left: 8px;
+                        margin-right: 8px;
+                    }
+                }
+                .singleProductPageCartButton {
+                    height: 38px;
+                    width: 120px;
+                    font-size: 14px;
+                    font-weight: 700;
+                    background-color: teal;
+                    border: none;
+                    outline: none;
+                    color: white;
+                    border: 1px solid grey;
+                    border-radius: 5px;
+                    cursor: pointer;
                 }
             }
         }
