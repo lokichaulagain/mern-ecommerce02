@@ -32,7 +32,6 @@ function Footer() {
                             <PinterestIcon />
                         </div>
 
-
                         <div className="socialMediaIcon">
                             <TwitterIcon />
                         </div>
@@ -48,7 +47,7 @@ function Footer() {
                     <div className="footerCenterConTitle">Quick Links</div>
                     <div className="quickLinkCon">
                         <ul className="quickLinkLists">
-                            <li className="quickLinkListsItem">Home</li>
+                            <li className="quickLinkListsItem"  >Home</li >
                             <li className="quickLinkListsItem">Cart</li>
                             <li className="quickLinkListsItem">Orders</li>
                             <li className="quickLinkListsItem">Men fashion</li>
@@ -70,22 +69,24 @@ function Footer() {
                 <div className="footerRightCon">
                     <span className="footerRightConTitle">Our Contact</span>
                     <div className="addressRow">
-                        <LocationOnIcon />
+                        <LocationOnIcon className='footerIcon' />
                         <span className='contactSpan'>New-Baneshwor 3342 Kathmandu,Nepal</span>
 
                     </div>
                     <div className="addressRow">
-                        <PhoneIcon />
+                        <PhoneIcon className='footerIcon'/>
                         <span className='contactSpan'>+977-984-567-890</span>
                     </div>
                     <div className="addressRow">
-                        <EmailOutlinedIcon />
+                        <EmailOutlinedIcon className='footerIcon'/>
                         <span className="contactSpan">demoshopping@gmail.com</span>
                     </div>
 
 
                 </div>
+                
             </div>
+            <span className='copyRightTxt'> &copy;copyright 2022-2025 @Loki Corporation, kathmandu Nepal .All Right Reserved.</span>
         </div>
     )
 }

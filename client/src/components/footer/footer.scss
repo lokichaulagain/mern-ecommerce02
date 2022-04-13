@@ -24,12 +24,22 @@
                 .socialMediaIcon {
                     width: 34px;
                     height: 34px;
-                    background-color: pink;
+                    background-color: teal;
                     border-radius: 50%;
                     display: flex;
                     align-items: center;
                     justify-content: center;
                     margin-right: 12px;
+                    color: white;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: white;
+                        color: teal;
+                    }
+
+
+                    
                 }
             }
         }
@@ -56,6 +66,15 @@
                         display: flex;
                         align-items: center;
                         width: 50%;
+                        text-decoration: underline solid 1px teal ;
+                        cursor: pointer;
+
+                        //hover effect
+                        &:hover {
+                            color: teal;
+                            text-decoration: underline solid 2px teal ;
+                        }
+                        
                     }
                 }
             }
@@ -75,13 +94,34 @@
                 display: flex;
                 align-items: center;
                 margin-top: 12px;
+                cursor: pointer;
 
                 .contactSpan{
                     margin-left: 14px;
+                    
+                    &:hover {
+                        color: teal;
+                        text-decoration: underline solid 2px teal ;
+                    }
+                }
+                .footerIcon{
+                    color: rgb(59, 121, 121);
+
+                    &:hover {
+                        color: teal;
+                        
+                    }
                 }
             }
 
             
     }
+}
+.copyRightTxt{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+   
 }
 }

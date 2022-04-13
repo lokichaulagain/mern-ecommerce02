@@ -8,18 +8,12 @@ function NewsLetter() {
             <span className="newsLetterTitle">Newsletter</span>
             <span className="newsLetterSubTitle">Get timely updated from your favourite products.</span>
 
-
-            <div className="newsLetterInputConWrapper">
-                <div className="newsLetterInputCon">
-                    <input className='newsLetterInput' type="text" placeholder="Enter your email" />
-                </div>
-
-                <div className="sendButCon">
-                    <SendIcon className="sendBut" />
+            <div className="newsLetterInputAndSendCon">
+                <input className='newsLetterInput' type="text" placeholder="Enter your email" />
+                <div className="newsLetterButtonCon">
+                    <SendIcon />
                 </div>
             </div>
-
-
         </div>
     )
 }

@@ -8,38 +8,41 @@
 
     .newsLetterTitle {
         font-size: 80px;
+        color: rgb(29, 28, 28);
     }
     .newsLetterSubTitle {
         font-size: 20px;
         font-weight: 500;
         margin-top: 16px;
     }
-    .newsLetterInputConWrapper {
+
+    .newsLetterInputAndSendCon {
         display: flex;
         align-items: center;
-        justify-content: center;
-        .newsLetterInputCon {
-            margin-top: 22px;
-            width: 610px;
-            height: 38px;
-            margin-right: 15px;
-            .newsLetterInput {
-                padding-left: 10px;
-                width: 100%;
-                height: 100%;
-            }
+        margin-top: 20px;
+       
+
+        .newsLetterInput {
+            height: 36px;
+            width: 600px;
+            border: none;
+            outline: none;
+            padding-left: 12px;
+            border: 1px solid teal;
+            background-color: whitesmoke;
+            border-radius: 5px;
+            
         }
-        .sendButCon {
-            margin-top: 26px;
-            width: 70px;
-            height: 41px;
+        .newsLetterButtonCon{
+            width: 56px;
+            height: 36px;
+            background-color: teal;
             display: flex;
             align-items: center;
             justify-content: center;
-            background-color: green;
-            // margin-left: 4.425px;
             color: white;
-            cursor: pointer;
+            border-radius: 2px;
+            margin-left: 2px;
         }
     }
 }

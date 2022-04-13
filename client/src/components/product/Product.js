@@ -9,9 +9,7 @@ function Product({ item }) {
     <div className='productCon'>
       <img className='productImg' src={item.img} alt="" />
 
-      {/* <div className="threeIconCon"> */}
-      {/* <div className= {item.threeIconCon}> */}
-      <div className= {`threeIconCombo ${item.threeIconCon}`}>
+      <div className={`threeIconCombo ${item.threeIconCon}`}>
         <div className="threeIcon">
           <ShoppingCartOutlinedIcon />
         </div>
