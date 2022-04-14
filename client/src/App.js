@@ -1,20 +1,30 @@
-// import Home from "./pages/home/Home";
-// import SingleProduct from "./pages/singleProduct/SingleProduct";
-// import Login from "./pages/login/Login";
+import Home from "./pages/home/Home";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from "react-router-dom";
+import CategoryProductList from "./pages/categoryProductlist/CategoryProductList";
+import SingleProduct from "./pages/singleProduct/SingleProduct";
 import Cart from "./pages/cart/Cart";
-// import Register from "./pages/register/Register";
+import Login from "./pages/login/Login";
+import Register from "./pages/register/Register";
 
-// import CategoryProductList from "./pages/categoryProductlist/CategoryProductList";
 
 function App() {
   return (
     <div className="App">
-      {/* <Home /> */}
-      {/* <SingleProduct /> */}
-      {/* <Login/> */}
-      {/* <Register /> */}
-      <Cart/>
-      {/* <CategoryProductList/> */}
+      <Router>
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route path="/products/:category" element={<CategoryProductList />} />
+          <Route path="/product/:id" element={<SingleProduct />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+        </Routes>
+      </Router>
+
     </div>
   );
 }
