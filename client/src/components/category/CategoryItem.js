@@ -1,5 +1,7 @@
 import React from 'react'
 import "./categoryItem.scss"
+import { Link } from "react-router-dom"
+
 
 function CategoryItem({ item }) {
     return (
@@ -9,7 +11,9 @@ function CategoryItem({ item }) {
             </div>
             <div className="info">
                 <span className="itemTitle">{item.title}</span>
-                <button className='itemButton'>SHOP NOW</button>
+                <Link to={`/products/${item.cat}`}>
+                    <button className='itemButton'>SHOP NOW</button>
+                </Link>
             </div>
         </div>
     )

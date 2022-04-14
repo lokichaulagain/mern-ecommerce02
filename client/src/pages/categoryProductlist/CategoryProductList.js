@@ -35,8 +35,6 @@ function CategoryProductList() {
                             <option value="">XXL</option>
                         </select>
 
-
-
                     </div>
                     <div className="filter2">
                         <span className="filterTxt">Filter Products:</span>
@@ -47,13 +45,8 @@ function CategoryProductList() {
                             <option value="">Most Buy</option>
                             <option value="">Trending Now</option>
                             <option value="">Most Liked</option>
-
-
                         </select>
-
                     </div>
-
-
                 </div>
                 <Products />
                 <NewsLetter />

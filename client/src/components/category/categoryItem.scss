@@ -27,7 +27,7 @@
             font-weight: 700;
             color: white;
         }
-        
+
         .itemButton {
             width: 100px;
             height: 38px;
@@ -40,6 +40,15 @@
             font-size: 14px;
             font-weight: 600;
             margin-top: 10px;
+            cursor: pointer;
+
+            &:hover {
+                background-color: white;
+                color: teal;
+                border: 1.5px solid teal;
+                transition: all 0.3s linear;
+                transform: rotateX(30deg);
+            }
         }
     }
 }
