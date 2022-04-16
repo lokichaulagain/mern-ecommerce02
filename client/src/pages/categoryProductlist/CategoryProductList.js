@@ -10,18 +10,14 @@ import { useState } from 'react'
 
 
 function CategoryProductList() {
-    // const location = useLocation()
-    // console.log(location.pathname.split("/")[2])
-
-    //to find location path and storing in cat variable
+    //useLocation Hook
     const location = useLocation()
     const cat = location.pathname.split("/")[2];
 
-
-    const [filters, setFilters] = useState({})//whenever we change color and size we will update this state
-    const [sort, setSort] = useState("newest")
+    //Colors Filters
+    const [filters, setFilters] = useState({})//at beginning its an empty object
     const handleFilters = (e) => {
-        const value = e.target.value
+        const value = e.target.value;
         setFilters({
             ...filters,
             [e.target.className]: value
@@ -29,13 +25,11 @@ function CategoryProductList() {
     }
 
 
-    const handleSorts = (e) => {
+    //sort Filters
+    const [sort, setSort] = useState("newest")//at beginning its newest
+    const sortFilters = (e) => {
         setSort(e.target.value)
     }
-
-
-
-
 
 
     return (
@@ -49,8 +43,8 @@ function CategoryProductList() {
                         <span className="filterTxt">Filter Products:</span>
 
                         {/* Colors Filter */}
-                        <select className='colorFilter' onChange={handleFilters}>
-                            <option>Colors</option>
+                        <select className='colorFilter' onChange={handleFilters} >
+                            <option disabled>Colors</option>
                             <option>Black</option>
                             <option>Red</option>
                             <option>Blue</option>
@@ -59,8 +53,8 @@ function CategoryProductList() {
                         </select>
 
                         {/* Size Filters */}
-                        <select className='sizeFilter' onChange={handleFilters}>
-                            <option>Size</option>
+                        <select className='sizeFilter' onChange={handleFilters} >
+                            <option disabled>Size</option>
                             <option>XS</option>
                             <option>S</option>
                             <option>M</option>
@@ -72,7 +66,7 @@ function CategoryProductList() {
                     {/* Sort Filters */}
                     <div className="filter2">
                         <span className="filterTxt">Sort Products:</span>
-                        <select className='sortFilter' onChange={handleSorts}>
+                        <select className='sortFilter' onChange={sortFilters} >
                             <option value="newest">Newest</option>
                             <option value="asc">Price(asc)</option>
                             <option value="desc">Price(dec)</option>
