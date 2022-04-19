@@ -57,12 +57,29 @@
 // export default Products
 
 
+
+
 import React from 'react'
 import "./products.scss"
 import Product from '../product/Product'
+import { useState, useEffect } from 'react'
 
 
-function Products() {
+function Products({ cat, filters, sort }) {//passing props from CategoryProductList
+  // console.log(cat, filters, sort);
+  //everything is ready to fetch data.Lets fetch
+
+  const [products, setProducts] = useState([])
+  const [filteredProducts, setFilteredProducts] = useState([])
+  useEffect(() => {
+
+  }, [cat])//if cat changes, then fetch data again
+
+
+
+
+
+
   return (
     <div className='productsCon'>
       <Product />

@@ -1,6 +1,6 @@
 import React from 'react'
 import "./categoryItem.scss"
-import { Link } from "react-router-dom"
+import { Link } from 'react-router-dom'
 
 
 function CategoryItem({ item }) {
@@ -18,4 +18,5 @@ function CategoryItem({ item }) {
         </div>
     )
 }
+
 export default CategoryItem

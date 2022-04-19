@@ -1,7 +1,7 @@
 import React from 'react'
 import "./categories.scss"
 import { categories } from '../../data'
-import CategoryItem from '../category/CategoryItem'
+import CategoryItem from '../categoryItem/CategoryItem'
 
 function Categories() {
     return (

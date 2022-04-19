@@ -12,13 +12,13 @@ import Footer from '../../components/footer/Footer'
 function Home() {
   return (
     <div className='homePageCon'>
-      <Announcement/>
-        <Navbar/>
-       <Slider/>
-       <Categories/>
-       <Products/>
-       <NewsLetter/>
-       <Footer/>
+      <Announcement />
+      <Navbar />
+      <Slider />
+      <Categories />
+      <Products />
+      <NewsLetter />
+      <Footer />
     </div>
   )
 }
