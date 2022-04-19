@@ -3,6 +3,7 @@ import "./cartProduct.scss"
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
 
+
 function CartProduct() {
     return (
         <div className='cartSingleProduct'>
@@ -45,7 +46,6 @@ function CartProduct() {
                 </div>
 
             </div>
-
 
             <hr className="cartHrLine"/>
         </div>

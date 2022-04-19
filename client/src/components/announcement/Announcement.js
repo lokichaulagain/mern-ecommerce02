@@ -1,6 +1,7 @@
 import React from 'react'
 import "./announcement.scss"
 
+
 function Announcement() {
     return (
         <div className="announcement">
@@ -8,4 +9,5 @@ function Announcement() {
         </div>
     )
 }
+
 export default Announcement

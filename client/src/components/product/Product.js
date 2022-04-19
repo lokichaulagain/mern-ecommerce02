@@ -4,12 +4,12 @@ import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 
-function Product({ item }) {
+function Product() {
   return (
     <div className='productCon'>
-      <img className='productImg' src={item.img} alt="" />
+      <img className='productImg' src="" alt="" />
 
-      <div className={`threeIconCombo ${item.threeIconCon}`}>
+      <div className="threeIconCombo" >
         <div className="threeIcon">
           <ShoppingCartOutlinedIcon />
         </div>
