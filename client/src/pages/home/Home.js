@@ -9,6 +9,7 @@ import NewsLetter from '../../components/newsLetter/NewsLetter'
 import Footer from '../../components/footer/Footer'
 
 
+
 function Home() {
   return (
     <div className='homePageCon'>

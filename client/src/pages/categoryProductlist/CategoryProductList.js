@@ -10,69 +10,68 @@ import { useState } from 'react'
 
 
 
+
+
 function CategoryProductList() {
-    //TO FIND PATH OF THIS PAGE
-    // const location =useLocation()
-    // console.log(location);
 
-    // const location = useLocation()
-    // console.log(location.pathname);
-
-    // const location =useLocation()
-    // console.log(location.pathname.split("/")[2] );
-
+    //Taking category name from url and fetching data according to it
     const location = useLocation()
-    const cat = location.pathname.split("/")[2];
+    console.log(location)
+    const cat = location.pathname.split('/')[2];
+    console.log(cat)
 
 
 
-    //whenever color and size Ui ma update hunxa then hamro state pani update hunu paryo
-    //color and size filter garda tyo value lai object ma rakhne
-    // const [filters, setFilters] = useState({})
-    // const handleFilters = (e) => {
-    //     const value = e.target.value
-    //     setFilters({
-    //         [e.target.className]: value
-    //     })
-    // }
-    // console.log(filters);
 
-    const [filters, setFilters] = useState({})
+
+
+    //when we change any filters we gonna change values inside the object.at first it is empty object
+    //Size and Color filter
+    const [filters, setFilters] = useState({})//empty object
     const handleFilters = (e) => {
-        const value = e.target.value
+        const value = e.target.value  //taking value from filter options
         setFilters({
-            ...filters,
-            [e.target.className]: value
+            ...filters,      //to keep all the filters in same object
+            [e.target.name]: value
         })
     }
-    // console.log(filters);
+    console.log(filters);
+
+
+
+
+
+
+
+
 
 
 
 
     //SORT FILTERS
-    // const [sort, setSort] = useState("newest")//newest at the beginning always 
-    // const handleSorts = (e) => {
-    //     const value = e.target.value
-    //     setSort({
-    //         [e.target.value]: value
-    //     })
-    // }
-    // console.log(sort)
-
-
     const [sort, setSort] = useState("newest")//newest at the beginning always 
     const handleSorts = (e) => {
-        setSort(e.target.value)
+        const value = e.target.value
+        setSort({
+            [e.target.value]: value
+        })
     }
-    // console.log(sort)
-
+    console.log(sort)
     //NOW using all this value in products component
 
 
 
 
+
+
+
+
+
+
+
+
     return (
+        // Filter section-------------------------------------------
         <div className='categoryProductListPageCon'>
             <div className="categoryProductListPageConWrapper">
                 <Navbar />
@@ -83,17 +82,17 @@ function CategoryProductList() {
                         <span className="filterTxt">Filter Products:</span>
 
                         {/* Colors Filter */}
-                        <select className='colorFilter' onChange={handleFilters} >
+                        <select name="color" className='colorFilter' onChange={handleFilters} >
                             <option disabled>Colors</option>
-                            <option>Black</option>
-                            <option>Red</option>
-                            <option>Blue</option>
-                            <option>Green</option>
-                            <option>Yellow</option>
+                            <option>black</option>
+                            <option>red</option>
+                            <option>blue</option>
+                            <option>green</option>
+                            <option>yellow</option>
                         </select>
 
                         {/* Size Filters */}
-                        <select className='sizeFilter' onChange={handleFilters}  >
+                        <select name="size" className='sizeFilter' onChange={handleFilters}  >
                             <option disabled>Size</option>
                             <option>XS</option>
                             <option>S</option>
@@ -112,10 +111,13 @@ function CategoryProductList() {
                             <option value="desc">Price(dec)</option>
                         </select>
                     </div>
-
                 </div>
-                
-                {/* passing all above value in Products */}
+
+
+
+
+
+                {/* passing all above value in Products / products images haru-------- */}
                 <Products cat={cat} filters={filters} sort={sort} />
                 <NewsLetter />
                 <Footer />

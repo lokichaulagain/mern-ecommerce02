@@ -13,9 +13,7 @@ import {
 
 
 function App() {
-
-  const user = true
-
+  const user = true;
   return (
     <div className="App">
       <Router>
