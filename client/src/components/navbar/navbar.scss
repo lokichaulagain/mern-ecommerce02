@@ -1,5 +1,5 @@
 .navBar {
-    height: 60px;
+    height: 90px;
     z-index: 999;
 
     .navWrapper {
@@ -7,13 +7,11 @@
         display: flex;
         align-items: center;
         justify-content: center;
-       
 
         .navLeft {
             flex: 1;
             display: flex;
             align-items: center;
-            
 
             .eN {
                 font-size: 16px;
@@ -62,7 +60,6 @@
                 font-size: 24px;
                 cursor: pointer;
                 color: rgb(55, 55, 55);
-               
             }
         }
         .navRight {
@@ -82,13 +79,28 @@
                 }
             }
             .navRightItem {
-                align-items: center;
-
-                .navRightCartIconBadge{  
-                    margin-left: 20px;
-                    cursor: pointer;
+                // height: 40px;
+                padding: 5px;
+                position: relative;
+                .badgeCircle {
+                    width: 17px;
+                    height: 17px;
+                    border-radius: 50%;
+                    background-color: green;
+                    display: flex;
+                    align-items: center;
+                    font-size: 12px;
+                    justify-content: center;
+                    color: white;
+                    font-weight: 600;
+                    position: absolute;
+                    top: 10px;
+                    margin-left: 10px;
                 }
-               
+
+                .navRightIcon {
+                    margin-top: 20px;
+                }
             }
         }
     }

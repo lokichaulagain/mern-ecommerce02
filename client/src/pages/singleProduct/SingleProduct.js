@@ -9,6 +9,9 @@ import AddIcon from '@mui/icons-material/Add';
 import { useLocation } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { publicRequest } from '../../requestMethod'
+import { addProduct } from '../../redux/cartRedux'
+import { useDispatch } from 'react-redux'
+
 
 
 
@@ -55,6 +58,9 @@ function SingleProduct() {
 
 
 
+
+
+
     //Color and size filter===========================================================================>
     const [filters, setFilters] = useState({})//empty object
     const handleFilters = (e) => {
@@ -69,6 +75,48 @@ function SingleProduct() {
 
 
 
+
+
+
+
+
+    //product quantity  increment and decrement Function===============================================>
+    const [quantity, setQuantity] = useState(1)
+
+    const handleQuantity = (type) => {
+        if (type === "dec") {
+            quantity > 1 && setQuantity(quantity - 1)
+        }
+        else {
+            setQuantity(quantity + 1)
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    //=====Select garey saki paxi yo kura set hunu paryo==============================================================================
+    // const [color, setColor] = useState("")
+    // const [size, setSize] = useState("")
+
+
+
+    //Cart Function====================================================================================================================>
+    const dispatch = useDispatch()
+
+    const handleCartClick = async () => {
+        dispatch(addProduct({ ...product, quantity, color: filters.color, size: filters.size }))
+
+    }
 
 
 
@@ -99,10 +147,10 @@ function SingleProduct() {
 
 
                     {/* Colors Filter ==========================================================*/}
-                    <select name="color"  className='SingleProductPageColorFilter' onChange={handleFilters} >
+                    <select name="color" className='SingleProductPageColorFilter' onChange={handleFilters} >
                         <option >Color</option>
-                        {product.color?.map((data) => (
-                            <option>{data}</option>
+                        {product.color?.map((c, key) => (
+                            <option key={key} >{c}</option>
                         ))}
                     </select>
                     {/* ======================================================================= */}
@@ -122,10 +170,10 @@ function SingleProduct() {
                     <div className="sizeChooseRow">
                         <span className="singleProductPageSelectSizeTxt">Size:</span>
                         <option >Size</option>
-                        <select className='SingleProductPagesizeFilter' name="size"  onChange={handleFilters} >
+                        <select className='SingleProductPagesizeFilter' name="size" onChange={handleFilters} >
                             <option >Size</option>
-                            {product.size?.map((s) => (
-                                <option >{s}</option>
+                            {product.size?.map((s, key) => (
+                                <option key={key} >{s}</option>
                             ))}
                         </select>
                     </div>
@@ -140,13 +188,15 @@ function SingleProduct() {
 
 
 
-                    <div className="quantityIncDecAndCartRow">
-                        <div className="quantityIncDec">
-                            <RemoveIcon />
-                            <div className="containerBetwnAddRemove">2</div>
-                            <AddIcon />
+                    <div name="counter" className="quantityIncDecAndCartRow"  >
+                        <div className="quantityIncDec" >
+                            <RemoveIcon onClick={() => handleQuantity("dec")} />
+                            <div className="containerBetwnAddRemove">{quantity}</div>
+                            <AddIcon onClick={() => handleQuantity("Inc")} />
                         </div>
-                        <button className="singleProductPageCartButton">ADD TO CART</button>
+
+
+                        <button className="singleProductPageCartButton" onClick={handleCartClick} >ADD TO CART</button>
                     </div>
                 </div>
             </div>
