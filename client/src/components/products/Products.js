@@ -45,7 +45,7 @@ function Products({ cat, filters, sort }) {
 
 
 
-  
+
 
   //Getting only Filtered products on screen (filtering)
   useEffect(() => {
@@ -64,13 +64,50 @@ function Products({ cat, filters, sort }) {
 
 
 
-  
+
+
+  //getting product according to sort
+  useEffect(() => {
+    if ((sort === "newest")) {
+      setFilteredProducts(prev =>
+        [...prev].sort((a, b) => a.createdAt - b.createdAt)
+      )
+    }
+
+
+    else if ((sort === "asc")) {
+      setFilteredProducts(prev =>
+        [...prev].sort((a, b) => a.price - b.price)
+      )
+    }
+
+
+    else {
+      setFilteredProducts(prev =>
+        [...prev].sort((a, b) => b.price - a.price)
+      )
+    }
+
+  }, [sort])
+
+
+
+
+
+
+
+
 
 
   return (
     <div className='productsCon'>
-      {filteredProducts.map((item, key) => (
-        <Product item={item} key={key} />))} {/* created item props here */}
+      {cat ? filteredProducts.map((item, key) => (
+        <Product item={item} key={key} />)) // created item props here 
+
+        : products.slice(0,8).map((item, key) => (<Product item={item} key={key} />
+        )
+
+        )}
     </div>
   )
 }

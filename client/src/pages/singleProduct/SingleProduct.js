@@ -6,8 +6,55 @@ import Newsletter from "../../components/newsLetter/NewsLetter"
 import Footer from '../../components/footer/Footer'
 import RemoveIcon from '@mui/icons-material/Remove';
 import AddIcon from '@mui/icons-material/Add';
+import { useLocation } from 'react-router-dom'
+import { useState, useEffect } from 'react'
+import { publicRequest } from '../../requestMethod'
+
+
+
+
+
+
+
+
 
 function SingleProduct() {
+
+
+
+
+    //In single product page we will fetch the data according to the url id of the particular product
+    const location = useLocation()
+    console.log(location)
+    const id = location.pathname.split('/')[2];
+    console.log(id)
+
+
+
+    //Fetching that particular product and its details using that id
+    const [product, setProduct] = useState({})
+    useEffect(() => {
+        const getProduct = async () => {
+            try {
+                const res = await publicRequest.get("products/find/" + id)
+                console.log(res.data)
+                setProduct(res.data)
+            } catch (error) {
+                console.log(error);
+            }
+        }
+        getProduct()
+    }, [id])
+    //lets use this data to display the product details
+
+
+
+
+
+
+
+
+
     return (
         <div className="singleProductCon">
             <Navbar />
@@ -15,15 +62,13 @@ function SingleProduct() {
 
             <div className="singleProductConWrapper">
                 <div className="singleProductImgCon">
-                    <img className='singleProductImg' src="https://www.burdastyle.com/pub/media/catalog/product/cache/7bd3727382ce0a860b68816435d76e26/107/BUS-PAT-BURTE-1320516/1170x1470_BS_2016_05_132_front.png" alt="" />
-                </div>
+                    <img className='singleProductImg' src={product.productImg} alt="" />
+                </div>2
                 <div className="singleProductInfoCon">
-                    <span className="singleProductInfoName">Denim Jumpsuit</span>
-                    <span className="singleProductInfoSubTitle">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam neque assumenda et repellat ducimus necessitatibus magni, iste, nihil sit sequi debitis? Quos corporis sequi iusto architecto iste, velit blanditiis! Cumque.
+                    <span className="singleProductInfoName">{product.title || "Dummy Title"}</span>
+                    <span className="singleProductInfoSubTitle">{product.desc || "dummy description"}</span>
 
-                    </span>
-
-                    <span className="singleProductPrice">$300</span>
+                    <span className="singleProductPrice">{"$ "+product.price || "$55 dummy "}</span>
 
                     <div className="colorAndSizeRow">
                         <span className="chooseColor">Color:</span>
@@ -39,14 +84,13 @@ function SingleProduct() {
                         <span className="singleProductPageSelectSizeTxt">Size:</span>
 
                         <select className='SingleProductPagesizeFilter' id="">
-                            <option disabled selected>Size</option>
+                            <option defaultValue>Size</option>
                             <option value="">XS</option>
                             <option value="">S</option>
                             <option value="">M</option>
                             <option value="">L</option>
                             <option value="">XXL</option>
                         </select>
-
                     </div>
 
 
@@ -64,16 +108,6 @@ function SingleProduct() {
                 </div>
 
             </div>
-
-
-
-
-
-
-
-
-
-
 
 
             <Newsletter />

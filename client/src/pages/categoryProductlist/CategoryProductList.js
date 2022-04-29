@@ -76,7 +76,7 @@ function CategoryProductList() {
             <div className="categoryProductListPageConWrapper">
                 <Navbar />
                 <Announcement />
-                <span className='dresses'>Dresses</span>
+                <span className='dresses'>{cat}</span>
                 <div className="categoryProductListPageFilterCon">
                     <div className="filter1">
                         <span className="filterTxt">Filter Products:</span>
