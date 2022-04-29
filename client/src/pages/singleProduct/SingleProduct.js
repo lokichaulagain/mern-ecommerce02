@@ -25,9 +25,9 @@ function SingleProduct() {
 
     //In single product page we will fetch the data according to the url id of the particular product
     const location = useLocation()
-    console.log(location)
     const id = location.pathname.split('/')[2];
     console.log(id)
+
 
 
 
@@ -45,7 +45,29 @@ function SingleProduct() {
         }
         getProduct()
     }, [id])
+    console.log(product);
     //lets use this data to display the product details
+
+
+
+
+
+
+
+
+    //Color and size filter===========================================================================>
+    const [filters, setFilters] = useState({})//empty object
+    const handleFilters = (e) => {
+        const value = e.target.value  //taking value from filter options
+        setFilters({
+            ...filters,      //to keep all the filters in same object
+            [e.target.name]: value
+        })
+    }
+    console.log(filters);
+    //================================================================================================>
+
+
 
 
 
@@ -63,35 +85,59 @@ function SingleProduct() {
             <div className="singleProductConWrapper">
                 <div className="singleProductImgCon">
                     <img className='singleProductImg' src={product.productImg} alt="" />
-                </div>2
+                </div>
                 <div className="singleProductInfoCon">
                     <span className="singleProductInfoName">{product.title || "Dummy Title"}</span>
                     <span className="singleProductInfoSubTitle">{product.desc || "dummy description"}</span>
 
-                    <span className="singleProductPrice">{"$ "+product.price || "$55 dummy "}</span>
+                    <span className="singleProductPrice">{"$ " + product.price || "$55 dummy "}</span>
 
-                    <div className="colorAndSizeRow">
-                        <span className="chooseColor">Color:</span>
-                        <div className='circularColorChooseDisk red'></div>
-                        <div className='circularColorChooseDisk blue'></div>
-                        <div className='circularColorChooseDisk  black'></div>
-                        <div className='circularColorChooseDisk grey'></div>
-                        <div className='circularColorChooseDisk  green'></div>
-                        <div className='circularColorChooseDisk orange'></div>
-                    </div>
 
+
+
+
+
+
+                    {/* Colors Filter ==========================================================*/}
+                    <select name="color"  className='SingleProductPageColorFilter' onChange={handleFilters} >
+                        <option >Color</option>
+                        {product.color?.map((data) => (
+                            <option>{data}</option>
+                        ))}
+                    </select>
+                    {/* ======================================================================= */}
+
+
+
+
+
+
+
+
+
+
+
+
+                    {/* Size filter ===================================================================*/}
                     <div className="sizeChooseRow">
                         <span className="singleProductPageSelectSizeTxt">Size:</span>
-
-                        <select className='SingleProductPagesizeFilter' id="">
-                            <option defaultValue>Size</option>
-                            <option value="">XS</option>
-                            <option value="">S</option>
-                            <option value="">M</option>
-                            <option value="">L</option>
-                            <option value="">XXL</option>
+                        <option >Size</option>
+                        <select className='SingleProductPagesizeFilter' name="size"  onChange={handleFilters} >
+                            <option >Size</option>
+                            {product.size?.map((s) => (
+                                <option >{s}</option>
+                            ))}
                         </select>
                     </div>
+                    {/* ================================================================================ */}
+
+
+
+
+
+
+
+
 
 
                     <div className="quantityIncDecAndCartRow">
@@ -102,11 +148,7 @@ function SingleProduct() {
                         </div>
                         <button className="singleProductPageCartButton">ADD TO CART</button>
                     </div>
-
-
-
                 </div>
-
             </div>
 
 
