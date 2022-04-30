@@ -22,8 +22,8 @@ function Navbar() {
     const cart = useSelector(state => state.cart)
     console.log(cart);
 
-    const quantity = useSelector(state => state.cart.quantity)
-    console.log(quantity);
+    const cquantity = useSelector(state => state.cart.cquantity)
+    console.log(cquantity);
 
 
 
@@ -67,7 +67,7 @@ function Navbar() {
 
                     <div className="navRightItem">
 
-                        <div className="badgeCircle">{quantity}</div>
+                        <div className="badgeCircle">{cquantity}</div>
                         <ShoppingCartOutlinedIcon className='navRightIcon' />
 
 

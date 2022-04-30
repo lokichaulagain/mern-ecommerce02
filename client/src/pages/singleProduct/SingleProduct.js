@@ -81,14 +81,14 @@ function SingleProduct() {
 
 
     //product quantity  increment and decrement Function===============================================>
-    const [quantity, setQuantity] = useState(1)
+    const [cquantity, setcQuantity] = useState(1)
 
     const handleQuantity = (type) => {
         if (type === "dec") {
-            quantity > 1 && setQuantity(quantity - 1)
+            cquantity > 1 && setcQuantity(cquantity - 1)
         }
         else {
-            setQuantity(quantity + 1)
+            setcQuantity(cquantity + 1)
         }
     }
 
@@ -114,7 +114,7 @@ function SingleProduct() {
     const dispatch = useDispatch()
 
     const handleCartClick = async () => {
-        dispatch(addProduct({ ...product, quantity, color: filters.color, size: filters.size }))
+        dispatch(addProduct({ ...product, cquantity, color: filters.color, size: filters.size }))
 
     }
 
@@ -191,7 +191,7 @@ function SingleProduct() {
                     <div name="counter" className="quantityIncDecAndCartRow"  >
                         <div className="quantityIncDec" >
                             <RemoveIcon onClick={() => handleQuantity("dec")} />
-                            <div className="containerBetwnAddRemove">{quantity}</div>
+                            <div className="containerBetwnAddRemove">{cquantity}</div>
                             <AddIcon onClick={() => handleQuantity("Inc")} />
                         </div>
 
