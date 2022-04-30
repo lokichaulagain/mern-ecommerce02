@@ -22,7 +22,7 @@ function App() {
     <div className="App">
       <Router>
         <Routes>
-          <Route exact path="/" element={<Home />} />
+          <Route exact path="/" element={user ? <Home /> : <Register/>} />
           <Route exact path="/products/:category" element={<CategoryProductlist />} />
           <Route exact path="/product/:id" element={<SingleProduct />} />
           <Route exact path="/cart" element={<Cart />} />

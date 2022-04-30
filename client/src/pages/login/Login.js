@@ -22,7 +22,7 @@ function Login() {
 
         //using login function  apiCalls
         loginUser(dispatch, { username, password })
-        window.location.replace("/");
+       
 
 
     }
