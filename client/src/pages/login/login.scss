@@ -31,13 +31,27 @@
             background-color: teal;
             border: none;
             color: white;
+            cursor: pointer;
 
+            &:disabled{
+                cursor: not-allowed;
+            }
+
+        }
+        .errorSpan{
+            color: red;
+            
+            
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         
         .createAccAndForgotRow{
             display: flex;
             justify-content: space-between;
             margin-bottom: 20px;
+            margin-top: 20px;
             .dontHaveAcc{
                 font-size: 20px;
                 font-weight: 500;
