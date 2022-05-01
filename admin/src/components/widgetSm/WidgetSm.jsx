@@ -15,14 +15,28 @@ export default function WidgetSm() {
   //Fetching new users
   const [users, setUsers] = useState([]);
 
+  // useEffect(() => {
+  //   const getUsers = async () => {
+  //     try {
+  //       const res = await axios.get("users/?new=true", {
+  //         headers: {
+  //           token: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyNTEzZjI3ZGVhZGYxYzYzY2RiYjcwNSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY1MTM3MjQ5MSwiZXhwIjoxNjUxOTc3MjkxfQ.exFnXehZ-C9g43u45GEUUETfdm_0zM_fNTP90nsu1kU"
+  //         }
+  //       });
+  //       console.log(res.data)
+  //       setUsers(res.data);
+
+  //     } catch (error) {
+  //       console.log(error);
+  //     }
+  //   }
+  //   getUsers();
+  // }, []);
+
   useEffect(() => {
     const getUsers = async () => {
       try {
-        const res = await axios.get("users/?new=true", {
-          headers: {
-            token: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyNTEzZjI3ZGVhZGYxYzYzY2RiYjcwNSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY1MTM3MjQ5MSwiZXhwIjoxNjUxOTc3MjkxfQ.exFnXehZ-C9g43u45GEUUETfdm_0zM_fNTP90nsu1kU"
-          }
-        });
+        const res = await userRequest.get("users/?new=true");
         console.log(res.data)
         setUsers(res.data);
 

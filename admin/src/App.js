@@ -15,6 +15,7 @@ import Login from "./pages/login/Login";
 
 function App() {
 
+  //local storage ko user admin ho vaney paxi it can access these routes
   const admin = JSON.parse(JSON.parse(localStorage.getItem("persist:root")).user).currentUser.isAdmin;
 
 
@@ -23,9 +24,9 @@ function App() {
     <Router>
       <Switch>
         <Route path="/login"><Login /> </Route>
-        {admin && (
+         {admin && (
 
-          <>
+          <> 
             <Topbar />
 
 
