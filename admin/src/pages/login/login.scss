@@ -1,0 +1,63 @@
+.login {
+    .loginWrapper {
+        .formContainer {
+            width: 500px;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            margin-left: 34%;
+            margin-top: 100px;
+
+            .labelText {
+                font-size: 20px;
+
+                margin-bottom: 10px;
+            }
+            .loginInput {
+                height: 40px;
+                margin-bottom: 18px;
+                outline: none;
+                font-size: 16px;
+                border-radius: 10px;
+                padding-left: 10px;
+                border: none;
+                border: 1.5px solid teal;
+            }
+            .dontHaveAccountTxt {
+                font-size: 16px;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                cursor: pointer;
+            }
+
+            .loginButton {
+                height: 40px;
+                margin-bottom: 18px;
+                outline: none;
+                font-size: 18px;
+                border-radius: 10px;
+                padding-left: 10px;
+                font-weight: 600;
+                background-color: teal;
+                border: none;
+                color: white;
+            }
+            .LB1 {
+                &:disabled {
+                    cursor: not-allowed;
+                }
+            }
+
+            .errorSpan {
+                color: red;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .loginButton:disabled {
+                cursor: not-allowed;
+            }
+        }
+    }
+}
