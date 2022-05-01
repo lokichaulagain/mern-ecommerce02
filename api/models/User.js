@@ -29,7 +29,16 @@ const UserSchema = new mongoose.Schema({
     isAdmin: {
         type: Boolean,
         default: false
+    },
+
+    profilePic: {
+        type: String,
+        default: ""
+    },
+    profession: {
+        type: String,
     }
+
 
 }, { timestamps: true })
 

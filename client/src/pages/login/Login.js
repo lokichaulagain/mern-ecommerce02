@@ -22,10 +22,11 @@ function Login() {
 
         //using login function  apiCalls
         loginUser(dispatch, { username, password })
-       
-
-
+        
+    
     }
+
+    // console.log(JSON.parse(JSON.parse(localStorage.getItem("persist:root")).user).currentUser.accessToken)
 
 
 

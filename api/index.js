@@ -9,22 +9,21 @@ const cartRoute = require("./routes/cart")
 const orderRoute = require("./routes/order")
 
 
+
+
 //MongoDB connection
 mongoose.connect(process.env.MONGO_URL)//its a promise so we can use .then and .catch
     .then(() => console.log("MongoDB connection successful"))
     .catch((err) => console.log(err))
 
 
-// app.use((req, res, next) => {
-//     res.header('Access-Control-Allow-Origin', '*');
-//     next();
-// });
-app.use(function (req, res, next) {
-    res.header("Access-Control-Allow-Origin", "*");
-    // res.header("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT");
-    // res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type), Accept, x-client-key, x-client-token, x-client-secret, Authorization");
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', '*');
     next();
+    
 });
+
+
 
 //Middleware
 app.use(express.json())

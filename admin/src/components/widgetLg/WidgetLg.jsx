@@ -8,21 +8,20 @@ import axios from "axios";
 export default function WidgetLg() {
 
 
-
   //Fetching latest orders
   const [orders, setOrders] = useState([]);
 
   useEffect(() => {
     const getOrders = async () => {
       try {
-        const res = await axios.get("/orders/get", {
+        const res = await axios.get("/orders", {
           headers: {
             token: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyNTEzZjI3ZGVhZGYxYzYzY2RiYjcwNSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY1MTM3MjQ5MSwiZXhwIjoxNjUxOTc3MjkxfQ.exFnXehZ-C9g43u45GEUUETfdm_0zM_fNTP90nsu1kU"
           }
         });
         console.log(res.data)
-        // setOrders(res.data);
-
+        setOrders(res.data);
+// 
       } catch (error) {
         console.log(error);
       }
